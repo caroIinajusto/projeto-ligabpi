@@ -1,0 +1,923 @@
+{
+
+  "jogos": [
+    {
+      "jornada": 22,
+      "data": "2025-05-10T16:00:00.000Z",
+      "equipa_casa": "682f42d40035ca17072d",
+      "equipa_fora": "682f4546002d38071f69",
+      "resultado": "0-2"
+    },
+    {
+      "jornada": 22,
+      "data": "2025-05-11T11:00:00.000Z",
+      "equipa_casa": "682f44ff00339218f676",
+      "equipa_fora": "682f427b002122cce917",
+      "resultado": "1-2"
+    },
+    {
+      "jornada": 22,
+      "data": "2025-05-11T15:00:00.000Z",
+      "equipa_casa": "682f44ab0007796be90e",
+      "equipa_fora": "682f452100382cdc5a64",
+      "resultado": "0-3"
+    },
+    {
+      "jornada": 22,
+      "data": "2025-05-11T15:00:00.000Z",
+      "equipa_casa": "682f45740005cca0a5a0",
+      "equipa_fora": "682f43d40003346ef124",
+      "resultado": "6-2"
+    },
+    {
+      "jornada": 22,
+      "data": "2025-05-11T15:00:00.000Z",
+      "equipa_casa": "682f44da002910127fde",
+      "equipa_fora": "682f4472002be7fd0ebe",
+      "resultado": "0-2"
+    },
+    {
+      "jornada": 22,
+      "data": "2025-05-11T15:00:00.000Z",
+      "equipa_casa": "682f43a80023953acd50",
+      "equipa_fora": "682f4598003b5dc16da4",
+      "resultado": "2-0"
+    },
+    {
+      "jornada": 21,
+      "data": "2025-05-03T11:00:00.000Z",
+      "equipa_casa": "682f4598003b5dc16da4",
+      "equipa_fora": "682f44ab0007796be90e",
+      "resultado": "0-5"
+    },
+    {
+      "jornada": 21,
+      "data": "2025-05-03T15:00:00.000Z",
+      "equipa_casa": "682f427b002122cce917",
+      "equipa_fora": "682f42d40035ca17072d",
+      "resultado": "5-0"
+    },
+    {
+      "jornada": 21,
+      "data": "2025-05-03T15:00:00.000Z",
+      "equipa_casa": "682f4472002be7fd0ebe",
+      "equipa_fora": "682f43a80023953acd50",
+      "resultado": "3-0"
+    },
+    {
+      "jornada": 21,
+      "data": "2025-05-04T15:00:00.000Z",
+      "equipa_casa": "682f452100382cdc5a64",
+      "equipa_fora": "682f44ff00339218f676",
+      "resultado": "2-0"
+    },
+    {
+      "jornada": 21,
+      "data": "2025-05-04T15:00:00.000Z",
+      "equipa_casa": "682f4546002d38071f69",
+      "equipa_fora": "682f45740005cca0a5a0",
+      "resultado": "3-1"
+    },
+    {
+      "jornada": 21,
+      "data": "2025-05-04T15:00:00.000Z",
+      "equipa_casa": "682f43d40003346ef124",
+      "equipa_fora": "682f44da002910127fde",
+      "resultado": "0-0"
+    },
+    {
+      "jornada": 20,
+      "data": "2025-04-12T15:00:00.000Z",
+      "equipa_casa": "682f43a80023953acd50",
+      "equipa_fora": "682f43d40003346ef124",
+      "resultado": "2-1"
+    },
+    {
+      "jornada": 20,
+      "data": "2025-04-12T15:00:00.000Z",
+      "equipa_casa": "682f42d40035ca17072d",
+      "equipa_fora": "682f452100382cdc5a64",
+      "resultado": "0-6"
+    },
+    {
+      "jornada": 20,
+      "data": "2025-04-12T15:00:00.000Z",
+      "equipa_casa": "682f45740005cca0a5a0",
+      "equipa_fora": "682f427b002122cce917",
+      "resultado": "0-3"
+    },
+    {
+      "jornada": 20,
+      "data": "2025-04-12T15:00:00.000Z",
+      "equipa_casa": "682f44da002910127fde",
+      "equipa_fora": "682f4546002d38071f69",
+      "resultado": "1-1"
+    },
+    {
+      "jornada": 20,
+      "data": "2025-04-13T15:00:00.000Z",
+      "equipa_casa": "682f44ff00339218f676",
+      "equipa_fora": "682f44ab0007796be90e",
+      "resultado": "0-0"
+    },
+    {
+      "jornada": 20,
+      "data": "2025-04-13T15:00:00.000Z",
+      "equipa_casa": "682f4598003b5dc16da4",
+      "equipa_fora": "682f4472002be7fd0ebe",
+      "resultado": "0-6"
+    },
+{
+      "jornada": 19,
+      "data": "2025-03-29T15:00:00.000Z",
+      "equipa_casa": "682f44ab0007796be90e",
+      "equipa_fora": "682f4472002be7fd0ebe",
+      "resultado": "0-1"
+    },
+    {
+      "jornada": 19,
+      "data": "2025-03-29T15:00:00.000Z",
+      "equipa_casa": "682f44ff00339218f676",
+      "equipa_fora": "682f42d40035ca17072d",
+      "resultado": "4-0"
+    },
+    {
+      "jornada": 19,
+      "data": "2025-03-29T15:00:00.000Z",
+      "equipa_casa": "682f427b002122cce917",
+      "equipa_fora": "682f44da002910127fde",
+      "resultado": "4-1"
+    },
+    {
+      "jornada": 19,
+      "data": "2025-03-30T15:00:00.000Z",
+      "equipa_casa": "682f452100382cdc5a64",
+      "equipa_fora": "682f45740005cca0a5a0",
+      "resultado": "2-1"
+    },
+    {
+      "jornada": 19,
+      "data": "2025-03-30T15:00:00.000Z",
+      "equipa_casa": "682f43d40003346ef124",
+      "equipa_fora": "682f4598003b5dc16da4",
+      "resultado": "2-0"
+    },
+    {
+      "jornada": 19,
+      "data": "2025-03-30T15:00:00.000Z",
+      "equipa_casa": "682f4546002d38071f69",
+      "equipa_fora": "682f43a80023953acd50",
+      "resultado": "2-0"
+    },
+    {
+      "jornada": 18,
+      "data": "2025-03-15T15:00:00.000Z",
+      "equipa_casa": "682f42d40035ca17072d",
+      "equipa_fora": "682f44ab0007796be90e",
+      "resultado": "2-0"
+    },
+    {
+      "jornada": 18,
+      "data": "2025-03-15T15:00:00.000Z",
+      "equipa_casa": "682f4472002be7fd0ebe",
+      "equipa_fora": "682f43d40003346ef124",
+      "resultado": "2-2"
+    },
+    {
+      "jornada": 18,
+      "data": "2025-03-16T15:00:00.000Z",
+      "equipa_casa": "682f45740005cca0a5a0",
+      "equipa_fora": "682f44ff00339218f676",
+      "resultado": "1-0"
+    },
+    {
+      "jornada": 18,
+      "data": "2025-03-16T15:00:00.000Z",
+      "equipa_casa": "682f43a80023953acd50",
+      "equipa_fora": "682f427b002122cce917",
+      "resultado": "0-2"
+    },
+    {
+      "jornada": 18,
+      "data": "2025-03-16T15:00:00.000Z",
+      "equipa_casa": "682f4598003b5dc16da4",
+      "equipa_fora": "682f4546002d38071f69",
+      "resultado": "0-7"
+    },
+    {
+      "jornada": 18,
+      "data": "2025-03-16T15:00:00.000Z",
+      "equipa_casa": "682f44da002910127fde",
+      "equipa_fora": "682f452100382cdc5a64",
+      "resultado": "0-0"
+    },
+    {
+      "jornada": 17,
+      "data": "2025-03-02T15:00:00.000Z",
+      "equipa_casa": "682f44ab0007796be90e",
+      "equipa_fora": "682f43d40003346ef124",
+      "resultado": "3-1"
+    },
+    {
+      "jornada": 17,
+      "data": "2025-03-02T15:00:00.000Z",
+      "equipa_casa": "682f452100382cdc5a64",
+      "equipa_fora": "682f43a80023953acd50",
+      "resultado": "2-0"
+    },
+    {
+      "jornada": 17,
+      "data": "2025-03-02T15:00:00.000Z",
+      "equipa_casa": "682f42d40035ca17072d",
+      "equipa_fora": "682f45740005cca0a5a0",
+      "resultado": "0-4"
+    },
+    {
+      "jornada": 17,
+      "data": "2025-03-02T15:00:00.000Z",
+      "equipa_casa": "682f427b002122cce917",
+      "equipa_fora": "682f4598003b5dc16da4",
+      "resultado": "6-0"
+    },
+    {
+      "jornada": 17,
+      "data": "2025-03-02T15:00:00.000Z",
+      "equipa_casa": "682f4546002d38071f69",
+      "equipa_fora": "682f4472002be7fd0ebe",
+      "resultado": "1-2"
+    },
+    {
+      "jornada": 17,
+      "data": "2025-03-03T15:00:00.000Z",
+      "equipa_casa": "682f44ff00339218f676",
+      "equipa_fora": "682f44da002910127fde",
+      "resultado": "2-0"
+    },
+    {
+      "jornada": 16,
+      "data": "2025-02-07T15:00:00.000Z",
+      "equipa_casa": "682f44ff00339218f676",
+      "equipa_fora": "682f43d40003346ef124",
+      "resultado": "1-2"
+    },
+    {
+      "jornada": 16,
+      "data": "2025-02-08T15:00:00.000Z",
+      "equipa_casa": "682f42d40035ca17072d",
+      "equipa_fora": "682f4472002be7fd0ebe",
+      "resultado": "2-2"
+    },
+    {
+      "jornada": 16,
+      "data": "2025-02-08T15:00:00.000Z",
+      "equipa_casa": "682f44ab0007796be90e",
+      "equipa_fora": "682f427b002122cce917",
+      "resultado": "0-1"
+    },
+    {
+      "jornada": 16,
+      "data": "2025-02-08T15:00:00.000Z",
+      "equipa_casa": "682f44da002910127fde",
+      "equipa_fora": "682f43a80023953acd50",
+      "resultado": "3-0"
+    },
+    {
+      "jornada": 16,
+      "data": "2025-02-08T15:00:00.000Z",
+      "equipa_casa": "682f452100382cdc5a64",
+      "equipa_fora": "682f4546002d38071f69",
+      "resultado": "1-2"
+    },
+    {
+      "jornada": 16,
+      "data": "2025-02-09T15:00:00.000Z",
+      "equipa_casa": "682f45740005cca0a5a0",
+      "equipa_fora": "682f4598003b5dc16da4",
+      "resultado": "8-0"
+    },
+    {
+      "jornada": 15,
+      "data": "2025-02-01T15:00:00.000Z",
+      "equipa_casa": "682f4546002d38071f69",
+      "equipa_fora": "682f44ff00339218f676",
+      "resultado": "0-2"
+    },
+    {
+      "jornada": 15,
+      "data": "2025-02-01T15:00:00.000Z",
+      "equipa_casa": "682f4598003b5dc16da4",
+      "equipa_fora": "682f44da002910127fde",
+      "resultado": "0-7"
+    },
+    {
+      "jornada": 15,
+      "data": "2025-02-01T15:00:00.000Z",
+      "equipa_casa": "682f427b002122cce917",
+      "equipa_fora": "682f452100382cdc5a64",
+      "resultado": "1-1"
+    },
+    {
+      "jornada": 15,
+      "data": "2025-02-02T15:00:00.000Z",
+      "equipa_casa": "682f43a80023953acd50",
+      "equipa_fora": "682f44ab0007796be90e",
+      "resultado": "0-2"
+    },
+    {
+      "jornada": 15,
+      "data": "2025-02-02T15:00:00.000Z",
+      "equipa_casa": "682f4472002be7fd0ebe",
+      "equipa_fora": "682f45740005cca0a5a0",
+      "resultado": "0-2"
+    },
+    {
+      "jornada": 15,
+      "data": "2025-02-02T15:00:00.000Z",
+      "equipa_casa": "682f43d40003346ef124",
+      "equipa_fora": "682f42d40035ca17072d",
+      "resultado": "0-0"
+    },
+    {
+      "jornada": 14,
+      "data": "2025-01-25T15:00:00.000Z",
+      "equipa_casa": "682f4598003b5dc16da4",
+      "equipa_fora": "682f452100382cdc5a64",
+      "resultado": "0-9"
+    },
+    {
+      "jornada": 14,
+      "data": "2025-01-25T15:00:00.000Z",
+      "equipa_casa": "682f43d40003346ef124",
+      "equipa_fora": "682f4546002d38071f69",
+      "resultado": "0-4"
+    },
+    {
+      "jornada": 14,
+      "data": "2025-01-26T15:00:00.000Z",
+      "equipa_casa": "682f45740005cca0a5a0",
+      "equipa_fora": "682f44ab0007796be90e",
+      "resultado": "3-1"
+    },
+    {
+      "jornada": 14,
+      "data": "2025-01-26T15:00:00.000Z",
+      "equipa_casa": "682f4472002be7fd0ebe",
+      "equipa_fora": "682f427b002122cce917",
+      "resultado": "1-3"
+    },
+    {
+      "jornada": 14,
+      "data": "2025-01-26T15:00:00.000Z",
+      "equipa_casa": "682f44da002910127fde",
+      "equipa_fora": "682f42d40035ca17072d",
+      "resultado": "3-0"
+    },
+    {
+      "jornada": 14,
+      "data": "2025-01-26T15:00:00.000Z",
+      "equipa_casa": "682f43a80023953acd50",
+      "equipa_fora": "682f44ff00339218f676",
+      "resultado": "2-1"
+    },
+    {
+      "jornada": 13,
+      "data": "2025-01-19T15:00:00.000Z",
+      "equipa_casa": "682f427b002122cce917",
+      "equipa_fora": "682f43d40003346ef124",
+      "resultado": "6-1"
+    },
+    {
+      "jornada": 13,
+      "data": "2025-01-19T15:00:00.000Z",
+      "equipa_casa": "682f45740005cca0a5a0",
+      "equipa_fora": "682f44da002910127fde",
+      "resultado": "2-3"
+    },
+    {
+      "jornada": 13,
+      "data": "2025-01-19T15:00:00.000Z",
+      "equipa_casa": "682f42d40035ca17072d",
+      "equipa_fora": "682f43a80023953acd50",
+      "resultado": "0-1"
+    },
+    {
+      "jornada": 13,
+      "data": "2025-01-19T15:00:00.000Z",
+      "equipa_casa": "682f452100382cdc5a64",
+      "equipa_fora": "682f4472002be7fd0ebe",
+      "resultado": "5-0"
+    },
+    {
+      "jornada": 13,
+      "data": "2025-01-19T15:00:00.000Z",
+      "equipa_casa": "682f44ab0007796be90e",
+      "equipa_fora": "682f4546002d38071f69",
+      "resultado": "1-0"
+    },
+    {
+      "jornada": 13,
+      "data": "2025-03-08T15:00:00.000Z",
+      "equipa_casa": "682f44ff00339218f676",
+      "equipa_fora": "682f4598003b5dc16da4",
+      "resultado": "4-0"
+    },
+    {
+      "jornada": 12,
+      "data": "2025-01-10T15:00:00.000Z",
+      "equipa_casa": "682f4546002d38071f69",
+      "equipa_fora": "682f427b002122cce917",
+      "resultado": "1-1"
+    },
+    {
+      "jornada": 12,
+      "data": "2025-01-11T15:00:00.000Z",
+      "equipa_casa": "682f44da002910127fde",
+      "equipa_fora": "682f44ab0007796be90e",
+      "resultado": "2-0"
+    },
+    {
+      "jornada": 12,
+      "data": "2025-01-11T15:00:00.000Z",
+      "equipa_casa": "682f4598003b5dc16da4",
+      "equipa_fora": "682f42d40035ca17072d",
+      "resultado": "1-5"
+    },
+    {
+      "jornada": 12,
+      "data": "2025-01-11T15:00:00.000Z",
+      "equipa_casa": "682f43d40003346ef124",
+      "equipa_fora": "682f452100382cdc5a64",
+      "resultado": "1-6"
+    },
+    {
+      "jornada": 12,
+      "data": "2025-01-12T15:00:00.000Z",
+      "equipa_casa": "682f4472002be7fd0ebe",
+      "equipa_fora": "682f44ff00339218f676",
+      "resultado": "0-6"
+    },
+    {
+      "jornada": 12,
+      "data": "2025-01-12T15:00:00.000Z",
+      "equipa_casa": "682f43a80023953acd50",
+      "equipa_fora": "682f45740005cca0a5a0",
+      "resultado": "1-1"
+    },
+    {
+      "jornada": 11,
+      "data": "2025-01-04T15:00:00.000Z",
+      "equipa_casa": "682f4472002be7fd0ebe",
+      "equipa_fora": "682f44da002910127fde",
+      "resultado": "1-4"
+    },
+    {
+      "jornada": 11,
+      "data": "2025-01-05T15:00:00.000Z",
+      "equipa_casa": "682f452100382cdc5a64",
+      "equipa_fora": "682f44ab0007796be90e",
+      "resultado": "3-0"
+    },
+    {
+      "jornada": 11,
+      "data": "2025-01-05T15:00:00.000Z",
+      "equipa_casa": "682f43d40003346ef124",
+      "equipa_fora": "682f45740005cca0a5a0",
+      "resultado": "0-1"
+    },
+    {
+      "jornada": 11,
+      "data": "2025-01-05T15:00:00.000Z",
+      "equipa_casa": "682f4598003b5dc16da4",
+      "equipa_fora": "682f43a80023953acd50",
+      "resultado": "0-4"
+    },
+    {
+      "jornada": 11,
+      "data": "2025-01-05T15:00:00.000Z",
+      "equipa_casa": "682f427b002122cce917",
+      "equipa_fora": "682f44ff00339218f676",
+      "resultado": "3-1"
+    },
+    {
+      "jornada": 11,
+      "data": "2025-01-06T15:00:00.000Z",
+      "equipa_casa": "682f4546002d38071f69",
+      "equipa_fora": "682f42d40035ca17072d",
+      "resultado": "2-0"
+    },
+    {
+      "jornada": 10,
+      "data": "2024-12-20T15:00:00.000Z",
+      "equipa_casa": "682f44da002910127fde",
+      "equipa_fora": "682f43d40003346ef124",
+      "resultado": "3-2"
+    },
+    {
+      "jornada": 10,
+      "data": "2024-12-21T15:00:00.000Z",
+      "equipa_casa": "682f44ab0007796be90e",
+      "equipa_fora": "682f4598003b5dc16da4",
+      "resultado": "6-0"
+    },
+    {
+      "jornada": 10,
+      "data": "2024-12-21T15:00:00.000Z",
+      "equipa_casa": "682f45740005cca0a5a0",
+      "equipa_fora": "682f4546002d38071f69",
+      "resultado": "1-0"
+    },
+    {
+      "jornada": 10,
+      "data": "2024-12-21T15:00:00.000Z",
+      "equipa_casa": "682f43a80023953acd50",
+      "equipa_fora": "682f4472002be7fd0ebe",
+      "resultado": "3-0"
+    },
+    {
+      "jornada": 10,
+      "data": "2024-12-22T15:00:00.000Z",
+      "equipa_casa": "682f42d40035ca17072d",
+      "equipa_fora": "682f427b002122cce917",
+      "resultado": "1-3"
+    },
+    {
+      "jornada": 10,
+      "data": "2024-12-22T15:00:00.000Z",
+      "equipa_casa": "682f44ff00339218f676",
+      "equipa_fora": "682f452100382cdc5a64",
+      "resultado": "1-1"
+    },
+    {
+      "jornada": 9,
+      "data": "2024-11-16T15:00:00.000Z",
+      "equipa_casa": "682f4472002be7fd0ebe",
+      "equipa_fora": "682f4598003b5dc16da4",
+      "resultado": "7-1"
+    },
+    {
+      "jornada": 9,
+      "data": "2024-11-16T15:00:00.000Z",
+      "equipa_casa": "682f427b002122cce917",
+      "equipa_fora": "682f45740005cca0a5a0",
+      "resultado": "3-0"
+    },
+    {
+      "jornada": 9,
+      "data": "2024-11-16T15:00:00.000Z",
+      "equipa_casa": "682f452100382cdc5a64",
+      "equipa_fora": "682f42d40035ca17072d",
+      "resultado": "8-0"
+    },
+    {
+      "jornada": 9,
+      "data": "2024-11-17T15:00:00.000Z",
+      "equipa_casa": "682f44ab0007796be90e",
+      "equipa_fora": "682f44ff00339218f676",
+      "resultado": "0-1"
+    },
+    {
+      "jornada": 9,
+      "data": "2024-11-17T15:00:00.000Z",
+      "equipa_casa": "682f4546002d38071f69",
+      "equipa_fora": "682f44da002910127fde",
+      "resultado": "1-0"
+    },
+    {
+      "jornada": 9,
+      "data": "2024-11-17T15:00:00.000Z",
+      "equipa_casa": "682f43d40003346ef124",
+      "equipa_fora": "682f43a80023953acd50",
+      "resultado": "0-2"
+    },
+    {
+      "jornada": 8,
+      "data": "2024-11-09T15:00:00.000Z",
+      "equipa_casa": "682f45740005cca0a5a0",
+      "equipa_fora": "682f452100382cdc5a64",
+      "resultado": "0-1"
+    },
+    {
+      "jornada": 8,
+      "data": "2024-11-09T15:00:00.000Z",
+      "equipa_casa": "682f43a80023953acd50",
+      "equipa_fora": "682f4546002d38071f69",
+      "resultado": "1-2"
+    },
+    {
+      "jornada": 8,
+      "data": "2024-11-09T15:00:00.000Z",
+      "equipa_casa": "682f44da002910127fde",
+      "equipa_fora": "682f427b002122cce917",
+      "resultado": "0-2"
+    },
+    {
+      "jornada": 8,
+      "data": "2024-11-10T15:00:00.000Z",
+      "equipa_casa": "682f42d40035ca17072d",
+      "equipa_fora": "682f44ff00339218f676",
+      "resultado": "0-3"
+    },
+    {
+      "jornada": 8,
+      "data": "2024-11-10T15:00:00.000Z",
+      "equipa_casa": "682f4472002be7fd0ebe",
+      "equipa_fora": "682f44ab0007796be90e",
+      "resultado": "0-3"
+    },
+    {
+      "jornada": 8,
+      "data": "2024-11-10T15:00:00.000Z",
+      "equipa_casa": "682f4598003b5dc16da4",
+      "equipa_fora": "682f43d40003346ef124",
+      "resultado": "0-4"
+    },
+    {
+      "jornada": 7,
+      "data": "2024-11-02T15:00:00.000Z",
+      "equipa_casa": "682f4546002d38071f69",
+      "equipa_fora": "682f4598003b5dc16da4",
+      "resultado": "3-0"
+    },
+    {
+      "jornada": 7,
+      "data": "2024-11-02T15:00:00.000Z",
+      "equipa_casa": "682f44ab0007796be90e",
+      "equipa_fora": "682f42d40035ca17072d",
+      "resultado": "2-0"
+    },
+    {
+      "jornada": 7,
+      "data": "2024-11-02T15:00:00.000Z",
+      "equipa_casa": "682f43d40003346ef124",
+      "equipa_fora": "682f4472002be7fd0ebe",
+      "resultado": "3-1"
+    },
+    {
+      "jornada": 7,
+      "data": "2024-11-03T15:00:00.000Z",
+      "equipa_casa": "682f44ff00339218f676",
+      "equipa_fora": "682f45740005cca0a5a0",
+      "resultado": "3-0"
+    },
+    {
+      "jornada": 7,
+      "data": "2024-11-03T15:00:00.000Z",
+      "equipa_casa": "682f452100382cdc5a64",
+      "equipa_fora": "682f44da002910127fde",
+      "resultado": "3-0"
+    },
+    {
+      "jornada": 7,
+      "data": "2024-11-03T15:00:00.000Z",
+      "equipa_casa": "682f427b002122cce917",
+      "equipa_fora": "682f43a80023953acd50",
+      "resultado": "2-0"
+    },
+    {
+      "jornada": 6,
+      "data": "2024-10-12T15:00:00.000Z",
+      "equipa_casa": "682f4472002be7fd0ebe",
+      "equipa_fora": "682f4546002d38071f69",
+      "resultado": "0-5"
+    },
+    {
+      "jornada": 6,
+      "data": "2024-10-12T15:00:00.000Z",
+      "equipa_casa": "682f4598003b5dc16da4",
+      "equipa_fora": "682f427b002122cce917",
+      "resultado": "0-4"
+    },
+    {
+      "jornada": 6,
+      "data": "2024-10-13T15:00:00.000Z",
+      "equipa_casa": "682f43d40003346ef124",
+      "equipa_fora": "682f44ab0007796be90e",
+      "resultado": "0-0"
+    },
+    {
+      "jornada": 6,
+      "data": "2024-10-13T15:00:00.000Z",
+      "equipa_casa": "682f45740005cca0a5a0",
+      "equipa_fora": "682f42d40035ca17072d",
+      "resultado": "5-0"
+    },
+    {
+      "jornada": 6,
+      "data": "2024-10-13T15:00:00.000Z",
+      "equipa_casa": "682f44da002910127fde",
+      "equipa_fora": "682f44ff00339218f676",
+      "resultado": "0-0"
+    },
+    {
+      "jornada": 6,
+      "data": "2024-10-13T15:00:00.000Z",
+      "equipa_casa": "682f43a80023953acd50",
+      "equipa_fora": "682f452100382cdc5a64",
+      "resultado": "0-1"
+    },
+    {
+      "jornada": 5,
+      "data": "2024-10-05T15:00:00.000Z",
+      "equipa_casa": "682f4598003b5dc16da4",
+      "equipa_fora": "682f45740005cca0a5a0",
+      "resultado": "1-5"
+    },
+    {
+      "jornada": 5,
+      "data": "2024-10-05T15:00:00.000Z",
+      "equipa_casa": "682f4546002d38071f69",
+      "equipa_fora": "682f452100382cdc5a64",
+      "resultado": "0-2"
+    },
+    {
+      "jornada": 5,
+      "data": "2024-10-06T15:00:00.000Z",
+      "equipa_casa": "682f43a80023953acd50",
+      "equipa_fora": "682f44da002910127fde",
+      "resultado": "1-1"
+    },
+    {
+      "jornada": 5,
+      "data": "2024-10-06T15:00:00.000Z",
+      "equipa_casa": "682f4472002be7fd0ebe",
+      "equipa_fora": "682f42d40035ca17072d",
+      "resultado": "2-0"
+    },
+    {
+      "jornada": 5,
+      "data": "2024-10-07T15:00:00.000Z",
+      "equipa_casa": "682f43d40003346ef124",
+      "equipa_fora": "682f44ff00339218f676",
+      "resultado": "1-2"
+    },
+    {
+      "jornada": 4,
+      "data": "2024-09-27T15:00:00.000Z",
+      "equipa_casa": "682f44ff00339218f676",
+      "equipa_fora": "682f4546002d38071f69",
+      "resultado": "4-1"
+    },
+    {
+      "jornada": 4,
+      "data": "2024-09-29T15:00:00.000Z",
+      "equipa_casa": "682f44ab0007796be90e",
+      "equipa_fora": "682f43a80023953acd50",
+      "resultado": "2-1"
+    },
+    {
+      "jornada": 4,
+      "data": "2024-09-29T15:00:00.000Z",
+      "equipa_casa": "682f42d40035ca17072d",
+      "equipa_fora": "682f43d40003346ef124",
+      "resultado": "0-3"
+    },
+    {
+      "jornada": 4,
+      "data": "2024-09-29T15:00:00.000Z",
+      "equipa_casa": "682f44da002910127fde",
+      "equipa_fora": "682f4598003b5dc16da4",
+      "resultado": "4-0"
+    },
+    {
+      "jornada": 4,
+      "data": "2024-09-30T15:00:00.000Z",
+      "equipa_casa": "682f452100382cdc5a64",
+      "equipa_fora": "682f427b002122cce917",
+      "resultado": "0-2"
+    },
+    {
+      "jornada": 4,
+      "data": "2024-12-11T15:00:00.000Z",
+      "equipa_casa": "682f45740005cca0a5a0",
+      "equipa_fora": "682f4472002be7fd0ebe",
+      "resultado": "1-0"
+    },
+    {
+      "jornada": 3,
+      "data": "2024-09-21T15:00:00.000Z",
+      "equipa_casa": "682f4546002d38071f69",
+      "equipa_fora": "682f43d40003346ef124",
+      "resultado": "3-2"
+    },
+    {
+      "jornada": 3,
+      "data": "2024-09-21T15:00:00.000Z",
+      "equipa_casa": "682f44ff00339218f676",
+      "equipa_fora": "682f43a80023953acd50",
+      "resultado": "2-1"
+    },
+    {
+      "jornada": 3,
+      "data": "2024-09-22T15:00:00.000Z",
+      "equipa_casa": "682f427b002122cce917",
+      "equipa_fora": "682f4472002be7fd0ebe",
+      "resultado": "4-0"
+    },
+    {
+      "jornada": 3,
+      "data": "2024-10-20T15:00:00.000Z",
+      "equipa_casa": "682f44ab0007796be90e",
+      "equipa_fora": "682f45740005cca0a5a0",
+      "resultado": "1-0"
+    },
+    {
+      "jornada": 3,
+      "data": "2024-11-21T15:00:00.000Z",
+      "equipa_casa": "682f42d40035ca17072d",
+      "equipa_fora": "682f44da002910127fde",
+      "resultado": "1-2"
+    },
+    {
+      "jornada": 3,
+      "data": "2024-11-22T15:00:00.000Z",
+      "equipa_casa": "682f452100382cdc5a64",
+      "equipa_fora": "682f4598003b5dc16da4",
+      "resultado": "4-0"
+    },
+    {
+      "jornada": 2,
+      "data": "2024-09-13T15:00:00.000Z",
+      "equipa_casa": "682f4472002be7fd0ebe",
+      "equipa_fora": "682f452100382cdc5a64",
+      "resultado": "1-3"
+    },
+    {
+      "jornada": 2,
+      "data": "2024-09-13T15:00:00.000Z",
+      "equipa_casa": "682f43d40003346ef124",
+      "equipa_fora": "682f427b002122cce917",
+      "resultado": "1-4"
+    },
+    {
+      "jornada": 2,
+      "data": "2024-09-14T15:00:00.000Z",
+      "equipa_casa": "682f43a80023953acd50",
+      "equipa_fora": "682f42d40035ca17072d",
+      "resultado": "1-0"
+    },
+    {
+      "jornada": 2,
+      "data": "2024-09-15T15:00:00.000Z",
+      "equipa_casa": "682f4546002d38071f69",
+      "equipa_fora": "682f44ab0007796be90e",
+      "resultado": "5-1"
+    },
+    {
+      "jornada": 2,
+      "data": "2024-09-15T15:00:00.000Z",
+      "equipa_casa": "682f44da002910127fde",
+      "equipa_fora": "682f45740005cca0a5a0",
+      "resultado": "0-0"
+    },
+    {
+      "jornada": 2,
+      "data": "2024-10-02T15:00:00.000Z",
+      "equipa_casa": "682f4598003b5dc16da4",
+      "equipa_fora": "682f44ff00339218f676",
+      "resultado": "0-7"
+    },
+    {
+      "jornada": 1,
+      "data": "2024-08-30T15:00:00.000Z",
+      "equipa_casa": "682f452100382cdc5a64",
+      "equipa_fora": "682f43d40003346ef124",
+      "resultado": "3-0"
+    },
+    {
+      "jornada": 1,
+      "data": "2024-08-30T15:00:00.000Z",
+      "equipa_casa": "682f427b002122cce917",
+      "equipa_fora": "682f4546002d38071f69",
+      "resultado": "2-1"
+    },
+    {
+      "jornada": 1,
+      "data": "2024-08-31T15:00:00.000Z",
+      "equipa_casa": "682f44ab0007796be90e",
+      "equipa_fora": "682f44da002910127fde",
+      "resultado": "1-1"
+    },
+    {
+      "jornada": 1,
+      "data": "2024-08-31T15:00:00.000Z",
+      "equipa_casa": "682f45740005cca0a5a0",
+      "equipa_fora": "682f43a80023953acd50",
+      "resultado": "2-0"
+    },
+    {
+      "jornada": 1,
+      "data": "2024-09-01T15:00:00.000Z",
+      "equipa_casa": "682f44ff00339218f676",
+      "equipa_fora": "682f4472002be7fd0ebe",
+      "resultado": "6-1"
+    },
+    {
+      "jornada": 1,
+      "data": "2024-12-12T15:00:00.000Z",
+      "equipa_casa": "682f42d40035ca17072d",
+      "equipa_fora": "682f4598003b5dc16da4",
+      "resultado": "2-1"
+    }
+  ]
+}
+

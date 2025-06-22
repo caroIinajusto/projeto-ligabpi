@@ -1,0 +1,16 @@
+export default {
+  ligaBPI: require('../assets/icons/icon.png'),
+  rightArrow: require('../assets/icons/right-arrow.png'),
+  bell: require('../assets/icons/bell.png'),
+  edit: require('../assets/icons/edit.png'),
+  trophy: require('../assets/icons/trophy.png'),
+  teams: require('../assets/icons/teams.png'),
+  logout: require('../assets/icons/logout.png'),
+  jogos: require('../assets/icons/jogos.png'),
+  classificacao: require('../assets/icons/classificacao.png'),
+  clubes: require('../assets/icons/clubes.png'),
+  marcadoras: require('../assets/icons/marcadoras.png'),
+  noticias: require('../assets/icons/noticias.png'),
+  previsoes: require('../assets/icons/previsoes.png'),
+  login: require('../assets/icons/login.png'),
+};

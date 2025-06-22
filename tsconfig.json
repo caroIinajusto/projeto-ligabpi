@@ -2,16 +2,28 @@
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
     "strict": true,
+    "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./*"
-      ]
-    }
+      "@/*": ["./*"]  // Ajustado para apontar para a raiz do projeto
+    },
+    "jsx": "react-native",
+    "lib": ["esnext"],
+    "module": "Node16",
+    "moduleResolution": "node16",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "types": ["react-native", "jest"]
   },
   "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    ".expo/types/**/*.ts",
-    "expo-env.d.ts"
-  ]
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    "components/**/*.ts",
+    "components/**/*.tsx",
+    "lib/**/*.ts",
+    "lib/**/*.tsx",
+    "context/**/*.ts",
+    "context/**/*.tsx"
+, "components/Clubes.tsx"  ],
+  "exclude": ["node_modules"]
 }

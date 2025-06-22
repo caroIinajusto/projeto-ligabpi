@@ -1,59 +1,144 @@
-import React from 'react';
-import FontAwesome from '@expo/vector-icons/FontAwesome';
-import { Link, Tabs } from 'expo-router';
-import { Pressable } from 'react-native';
-
-import Colors from '@/constants/Colors';
-import { useColorScheme } from '@/components/useColorScheme';
-import { useClientOnlyValue } from '@/components/useClientOnlyValue';
-
-// You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
-function TabBarIcon(props: {
-  name: React.ComponentProps<typeof FontAwesome>['name'];
-  color: string;
-}) {
-  return <FontAwesome size={28} style={{ marginBottom: -3 }} {...props} />;
-}
+import { Tabs } from 'expo-router';
+import { Ionicons } from '@expo/vector-icons';
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
-  return (
-    <Tabs
-      screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        // Disable the static render of the header on web
-        // to prevent a hydration error in React Navigation v6.
-        headerShown: useClientOnlyValue(false, true),
-      }}>
-      <Tabs.Screen
-        name="index"
-        options={{
-          title: 'Tab One',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
-          headerRight: () => (
-            <Link href="/modal" asChild>
-              <Pressable>
-                {({ pressed }) => (
-                  <FontAwesome
-                    name="info-circle"
-                    size={25}
-                    color={Colors[colorScheme ?? 'light'].text}
-                    style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
-                  />
-                )}
-              </Pressable>
-            </Link>
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="two"
-        options={{
-          title: 'Tab Two',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
-        }}
-      />
-    </Tabs>
-  );
+    return (
+        <Tabs
+            screenOptions={{
+                tabBarActiveTintColor: '#1e40af',
+                tabBarInactiveTintColor: '#6b7280',
+                tabBarStyle: {
+                    backgroundColor: '#ffffff',
+                    borderTopWidth: 1,
+                    borderTopColor: '#e5e7eb',
+                },
+                headerStyle: {
+                    backgroundColor: '#1e40af',
+                },
+                headerTintColor: '#ffffff',
+                headerTitleStyle: {
+                    fontWeight: 'bold',
+                },
+            }}
+        >
+            <Tabs.Screen
+                name="index"
+                options={{
+                    title: 'Início',
+                    tabBarIcon: ({ color, size }: { color: string; size: number }) => (
+                        <Ionicons name="home-outline" size={size} color={color} />
+                    ),
+                    headerTitle: 'Liga BPI',
+                }}
+            />
+            <Tabs.Screen
+                name="jogos"
+                options={{
+                    title: 'Jogos',
+                    tabBarIcon: ({ color, size }: { color: string; size: number }) => (
+                        <Ionicons name="football-outline" size={size} color={color} />
+                    ),
+                    headerTitle: 'Jogos',
+                }}
+            />
+            <Tabs.Screen
+                name="classificacao"
+                options={{
+                    title: 'Classificação',
+                    tabBarIcon: ({ color, size }: { color: string; size: number }) => (
+                        <Ionicons name="trophy-outline" size={size} color={color} />
+                    ),
+                    headerTitle: 'Classificação',
+                }}
+            />
+            <Tabs.Screen
+                name="clubes"
+                options={{
+                    title: 'Clubes',
+                    tabBarIcon: ({ color, size }: { color: string; size: number }) => (
+                        <Ionicons name="people-outline" size={size} color={color} />
+                    ),
+                    headerTitle: 'Clubes',
+                }}
+            />
+            <Tabs.Screen
+                name="mais"
+                options={{
+                    title: 'Mais',
+                    tabBarIcon: ({ color, size }: { color: string; size: number }) => (
+                        <Ionicons name="ellipsis-horizontal-outline" size={size} color={color} />
+                    ),
+                    headerTitle: 'Mais',
+                }}
+            />
+            <Tabs.Screen
+                   name="noticia/[id]"
+    options={{
+        href: null, 
+    }}
+/>
+ <Tabs.Screen
+                   name="explore"
+    options={{
+        href: null, 
+    }}
+    
+/>
+<Tabs.Screen
+                   name="noticias/[id]"
+    options={{
+        href: null, 
+    }}
+/>
+<Tabs.Screen
+                   name="clube/[clubeId]"
+    options={{
+        href: null, 
+    }}
+/>
+<Tabs.Screen
+                   name="jogadora/[jogadoraId]"
+    options={{
+        href: null, 
+    }}
+/>
+<Tabs.Screen
+                   name="previsoes"
+    options={{
+        href: null, 
+    }}
+/>
+<Tabs.Screen
+                   name="login"
+    options={{
+        href: null, 
+    }}
+/>
+<Tabs.Screen
+                   name="registar"
+    options={{
+        href: null, 
+    }}
+/>
+<Tabs.Screen
+                   name="profile"
+    options={{
+        href: null, 
+    }}
+/>
+<Tabs.Screen
+                   name="chat"
+    options={{
+        href: null, 
+    }}
+/>
+<Tabs.Screen
+                   name="[JogoId]"
+    options={{
+        href: null, 
+    }}
+/>
+        </Tabs>
+        
+    );
 }

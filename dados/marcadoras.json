@@ -1,0 +1,53 @@
+{
+  "marcadoras": [
+    {
+        "jogadora":"6851d4677d980d4a5721",
+      "nome": "Cristina Martín-Prieto",
+      "clube": "682f427b002122cce917",
+      "golos": 19,
+      "foto": "https://www.zerozero.pt/img/jogadores/new/36/10/143610_cristina_martin_prieto_20240923145437.jpg"
+    },
+    {
+        "jogadora":"6851d491dad3936ade0b",
+      "nome": "Taty Sena",
+      "clube": "682f44ff00339218f676",
+      "golos": 15,
+      "foto": "https://www.zerozero.pt/img/jogadores/new/26/99/502699_taty_sena_20240828020333.jpg"
+    },
+    {
+      "jogadora": "6851d4a45f7502a261b4",
+      "nome": "Jennie Lakip",
+      "clube": "682f45740005cca0a5a0",
+      "golos": 13,
+      "foto": "https://www.zerozero.pt/img/jogadores/new/19/10/961910_jennie_lakip_20240924124640.jpg"
+    },
+    {
+        "jogadora":"6851d49dcb53b23bd4e7",
+      "nome": "Janaina Weimer",
+      "clube": "682f4546002d38071f69",
+      "golos": 12,
+      "foto": "https://www.zerozero.pt/img/jogadores/new/41/03/1174103_janaina_weimer_20240923141042.png"
+    },
+    {
+        "jogadora":"6851d488d0614919de21",
+      "nome": "Vanessa Marques",
+      "clube": "682f44da002910127fde",
+      "golos": 10,
+      "foto": "https://www.zerozero.pt/img/jogadores/69/269769_20230918170743_vanessa_marques_1695053263.jpg"
+    },
+    {
+        "jogadora":"6851d4935153fcf94bb8",
+      "nome": "Malu Schmidt",
+      "clube": "682f44ff00339218f676",
+      "golos": 9,
+      "foto": "https://www.zerozero.pt/img/jogadores/new/89/06/668906_malu_schmidt_20240828032535.jpg"
+    },
+    {
+        "jogadora":"6851d499945b0e4d3019",
+      "nome": "Ana Capeta",
+      "clube": "682f452100382cdc5a64",
+      "golos": 8,
+      "foto": "https://www.zerozero.pt/img/jogadores/new/29/24/322924_ana_capeta_20240922180213.png"
+    }
+  ]
+}

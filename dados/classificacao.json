@@ -1,0 +1,14 @@
+[
+  {"clube": "Benfica", "jogos": 18, "vitorias": 16, "empates": 2, "derrotas": 0, "pontos": 50, "golos_marcados": 51, "golos_sofridos": 8},
+  {"clube": "Sporting", "jogos": 18, "vitorias": 13, "empates": 3, "derrotas": 2, "pontos": 42, "golos_marcados": 53, "golos_sofridos": 8},
+  {"clube": "Sc Braga", "jogos": 18, "vitorias": 12, "empates": 2, "derrotas": 4, "pontos": 38, "golos_marcados": 46, "golos_sofridos": 13},
+  {"clube": "Valadares Gaia", "jogos": 18, "vitorias": 11, "empates": 2, "derrotas": 5, "pontos": 35, "golos_marcados": 36, "golos_sofridos": 14},
+  {"clube": "Racing Power", "jogos": 18, "vitorias": 9, "empates": 5, "derrotas": 4, "pontos": 32, "golos_marcados": 33, "golos_sofridos": 16},
+  {"clube": "Torreense", "jogos": 18, "vitorias": 10, "empates": 1, "derrotas": 7, "pontos": 31, "golos_marcados": 38, "golos_sofridos": 20},
+  {"clube": "Maritimo", "jogos": 18, "vitorias": 8, "empates": 2, "derrotas": 8, "pontos": 26, "golos_marcados": 23, "golos_sofridos": 22},
+  {"clube": "Damaiense", "jogos": 18, "vitorias": 6, "empates": 2, "derrotas": 10, "pontos": 20, "golos_marcados": 18, "golos_sofridos": 23},
+  {"clube": "Estoril", "jogos": 18, "vitorias": 4, "empates": 3, "derrotas": 11, "pontos": 15, "golos_marcados": 23, "golos_sofridos": 41},
+  {"clube": "Famalicão", "jogos": 18, "vitorias": 3, "empates": 2, "derrotas": 13, "pontos": 11, "golos_marcados": 20, "golos_sofridos": 54},
+  {"clube": "Clube de Albergaria", "jogos": 18, "vitorias": 3, "empates": 2, "derrotas": 13, "pontos": 11, "golos_marcados": 13, "golos_sofridos": 43},
+  {"clube": "Vilaverdense", "jogos": 18, "vitorias": 1, "empates": 0, "derrotas": 18, "pontos": 0, "golos_marcados": 4, "golos_sofridos": 96}
+]
