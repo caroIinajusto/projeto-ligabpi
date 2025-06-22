@@ -68,7 +68,7 @@ const SignupScreen = () => {
           <View style={styles.inputContainer}>
             <TextInput
               style={styles.input}
-              placeholder="Nome completo"
+              placeholder="Nome de Utilizador"
               placeholderTextColor="#9CA3AF"
               value={nome}
               onChangeText={setNome}

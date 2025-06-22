@@ -15,26 +15,28 @@ function AuthGate() {
   useEffect(() => {
     if (loading) return;
 
-    const inAuthGroup = segments[0] === "(auth)";
-    const inTabsGroup = segments[0] === "(tabs)";
-
+    // 1. Extrai o grupo principal da rota atual
+    const currentRouteGroup = segments[0] || '';
+    
     console.log("🔍 Debug - User:", !!user);
     console.log("🔍 Debug - Segments:", segments);
-    console.log("🔍 Debug - In Auth Group:", inAuthGroup);
+    console.log("🔍 Debug - Current Route Group:", currentRouteGroup);
 
-     if (!user) {
-      if (!inAuthGroup) {
-        router.replace("/(auth)/login");
-      }
-    } else {
-      if (inAuthGroup) {
-        router.replace("/(tabs)");
-      }
+    // 2. Se NÃO há utilizador e NÃO estamos no grupo (auth)
+    if (!user && currentRouteGroup !== '(auth)') {
+      console.log("Redirecionando para login...");
+      router.replace("/(auth)/login");
+    }
+    
+    // 3. Se HÁ utilizador e estamos no grupo (auth)
+    if (user && currentRouteGroup === '(auth)') {
+      console.log("Redirecionando para tabs...");
+      router.replace("/(tabs)");
     }
 
-    
     SplashScreen.hideAsync();
   }, [user, loading, segments]);
+
 
   if (loading) {
     return (

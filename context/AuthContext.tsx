@@ -25,7 +25,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
 
-  // Verificar sessão inicial
+  
   useEffect(() => {
     checkInitialSession();
   }, []);
@@ -70,17 +70,19 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   };
 
-  const logout = async () => {
-    console.log("🚪 Fazendo logout...");
-    try {
-      await appwriteLogout();
-      setUser(null);
-      console.log(" Logout bem-sucedido");
-    } catch (error) {
-      console.log(" Erro no logout:", error);
-      setUser(null); 
-    }
-  };
+const logout = async () => {
+  console.log(" Fazendo logout...");
+  try {
+    await appwriteLogout(); 
+    console.log("Logout bem-sucedido");
+  } catch (error) {
+    console.log("Erro no logout:", error);
+    
+  } finally {
+    setUser(null); 
+  }
+};
+
 
   const refreshUser = async () => {
     try {

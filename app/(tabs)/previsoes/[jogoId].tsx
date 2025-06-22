@@ -117,6 +117,7 @@ const submitPrevisao = async () => {
   }
 };
 
+
     if (loading || !jogo) {
         return (
             <View style={styles.loadingContainer}>

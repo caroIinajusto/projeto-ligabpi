@@ -19,7 +19,7 @@ const LoginScreen = () => {
   const [senha, setSenha] = useState("");
   const [processando, setProcessando] = useState(false);
 
-  // Se já está autenticado, redireciona
+ 
   if (!loading && user) {
     return <Redirect href="/(tabs)" />;
   }
