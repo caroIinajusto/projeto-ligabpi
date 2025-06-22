@@ -32,7 +32,7 @@ function AuthGate() {
       }
     }
 
-    // Hide splash screen after navigation logic
+    
     SplashScreen.hideAsync();
   }, [user, loading, segments]);
 

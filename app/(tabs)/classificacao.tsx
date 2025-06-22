@@ -118,7 +118,7 @@ export default function ClassificacaoScreen() {
         <View style={styles.container}>
             <ScrollView horizontal showsHorizontalScrollIndicator={false}>
                 <View style={styles.tableContainer}>
-                    {/* Cabeçalho */}
+                    
                     <View style={styles.headerRow}>
                         <Text style={styles.headerPosition}>#</Text>
                         <Text style={styles.headerTeam}>EQUIPA</Text>

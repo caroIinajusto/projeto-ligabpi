@@ -33,7 +33,7 @@ export const GlobalProvider = ({ children }: { children: ReactNode }) => {
         try {
             const currentUser = await getCurrentUser();
             if (currentUser) {
-                // Map Appwrite user to our User type
+                
                 setUser({
                     id: currentUser.id,
                     name: currentUser.name,

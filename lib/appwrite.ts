@@ -11,7 +11,7 @@ import {
     OAuthProvider
 } from "react-native-appwrite";
 
-// Configuração
+
 export const config = {
     endpoint: "https://cloud.appwrite.io/v1",
     projectId: "681dfaa40016242bda0e",
@@ -127,7 +127,7 @@ export async function getCurrentUser() {
             ranking: userDoc.ranking || "-"
         };
     } catch (error) {
-        // Check if it's a scope/permission error (user not authenticated)
+       
         if (error instanceof Error && error.message.includes('missing scope')) {
             console.log("Utilizador não autenticado");
             return null;
@@ -142,7 +142,7 @@ export async function logout() {
     await account.deleteSession('current'); 
     return true;
   } catch (error) {
-    // If user is already logged out (guest role), consider it successful
+    
     if (error instanceof Error && error.message.includes('missing scope')) {
       console.log("Utilizador já não estava autenticado");
       return true;

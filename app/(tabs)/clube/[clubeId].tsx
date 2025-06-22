@@ -119,7 +119,7 @@ export default function ClubeScreen() {
     );
 }
 
-// Os estilos permanecem exatamente os mesmos
+
 const styles = StyleSheet.create({
     container: {
         padding: 16,

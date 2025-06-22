@@ -5,7 +5,7 @@ import { Stack } from "expo-router";
 import { databases, config } from "@/lib/appwrite";
 import { Models } from "react-native-appwrite";
 
-// Define the Noticia interface based on the data structure
+
 interface Noticia {
   $id: string;
   titulo: string;
@@ -29,7 +29,7 @@ export default function NoticiaDetalhe() {
           id as string
         ) as unknown as Models.Document;
         
-        // Safely convert Document to Noticia by ensuring all required fields exist
+        
         if (res && res.$id && res.titulo && res.conteudo && res.$createdAt) {
           setNoticia({
             $id: res.$id,
@@ -66,7 +66,6 @@ export default function NoticiaDetalhe() {
         <Text style={{ color: "#888", marginBottom: 20 }}>
           {new Date(noticia.$createdAt).toLocaleDateString("pt-PT")}
         </Text>
-        {/* Se tiver imagem: */}
         {noticia.imagem && (
           <Image source={{ uri: noticia.imagem }} style={{ width: "100%", height: 200, marginVertical: 20 }} />
         )}

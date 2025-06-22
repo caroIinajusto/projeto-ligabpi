@@ -12,7 +12,7 @@ import { databases, config, storage } from '@/lib/appwrite';
 import { Query } from "react-native-appwrite";
 import { router } from 'expo-router';
 
-// Interfaces para os dados
+
 interface Noticia {
     $id: string;
     $createdAt: string;
@@ -47,14 +47,14 @@ interface Marcadora {
     foto?: string;
 }
 
-// Função utilitária para obter URL de imagem (ID ou URL direto)
+
 const getImageSrc = (value: string | undefined): string | undefined => {
     if (!value) return undefined;
-    // Se for URL completo, devolve como está
+    
     if (typeof value === 'string' && (value.startsWith('http://') || value.startsWith('https://'))) {
         return value;
     }
-    // Se for só ID, gera preview do Appwrite Storage
+    
     return storage.getFilePreview(
         config.colecoes.mediaBucketId,
         value
@@ -73,7 +73,7 @@ export default function HomeScreen() {
             try {
                 setLoading(true);
 
-                // Buscar clubes para mapear nomes e símbolos
+            
                 const clubesData = await databases.listDocuments(
                     config.databaseId,
                     config.colecoes.clubes,
@@ -81,7 +81,6 @@ export default function HomeScreen() {
                 );
                 setClubes(clubesData.documents as unknown as Clube[]);
 
-                // Buscar notícias
                 const noticiasData = await databases.listDocuments(
                     config.databaseId,
                     config.colecoes.noticias,
@@ -89,7 +88,6 @@ export default function HomeScreen() {
                 );
                 setNoticias(noticiasData.documents as unknown as Noticia[]);
 
-                // Buscar classificação
                 const classificacaoData = await databases.listDocuments(
                     config.databaseId,
                     config.colecoes.classificacao,
@@ -97,7 +95,6 @@ export default function HomeScreen() {
                 );
                 setClassificacao(classificacaoData.documents as unknown as Classificacao[]);
 
-                // Buscar marcadoras
                 const marcadorasData = await databases.listDocuments(
                     config.databaseId,
                     config.colecoes.marcadoras,
@@ -114,7 +111,7 @@ export default function HomeScreen() {
         fetchData();
     }, []);
 
-    // Utilitário para buscar info do clube por ID
+ 
     const getClubeInfo = (clubeId: string): Clube | undefined => {
         return clubes.find(c => c.$id === clubeId);
     };
@@ -130,7 +127,7 @@ export default function HomeScreen() {
 
     return (
         <ScrollView style={styles.container}>
-            {/* Seção de Notícias */}
+            
             <View style={styles.section}>
                 <Text style={styles.sectionTitle}>Notícias Recentes</Text>
                 {noticias.length === 0 ? (
@@ -163,7 +160,7 @@ export default function HomeScreen() {
                 )}
             </View>
 
-            {/* Tabela de Classificação */}
+           
             <View style={styles.section}>
                 <Text style={styles.sectionTitle}>Top 5 - Classificação</Text>
                 <ScrollView horizontal>
@@ -204,7 +201,7 @@ export default function HomeScreen() {
                 </ScrollView>
             </View>
 
-            {/* Top 5 Marcadoras */}
+           
             <View style={styles.section}>
                 <Text style={styles.sectionTitle}>Top 5 - Marcadoras</Text>
                 {marcadoras.length === 0 ? (
@@ -212,11 +209,11 @@ export default function HomeScreen() {
                 ) : (
                     <>
                         {marcadoras.map((marcadora, idx) => {
-                            // O campo clube da marcadora é um objeto, não apenas o ID
+                           
                             const clubeInfo = clubes.find(c => c.$id === marcadora.clube.$id);
                             return (
                                 <View key={marcadora.$id} style={styles.scorerItem}>
-                                    {/* Foto da marcadora */}
+                                    
                                     {marcadora.foto ? (
                                         <Image
                                             source={{ uri: getImageSrc(marcadora.foto) }}

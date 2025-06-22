@@ -48,12 +48,12 @@ const handleLogout = async () => {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{ paddingBottom: 32, paddingHorizontal: 16 }}
       >
-        {/* Header */}
+        
         <View style={styles.header}>
           <Text style={styles.headerTitle}>Perfil</Text>
         </View>
 
-        {/* Avatar e info */}
+        
         <View style={styles.avatarBox}>
           <Image
             source={
@@ -71,7 +71,7 @@ const handleLogout = async () => {
           </TouchableOpacity>
         </View>
 
-        {/* Info */}
+       
         <View style={styles.infoBox}>
           <Text style={styles.name}>{user?.name || "Utilizador"}</Text>
           <Text style={styles.email}>{user?.email}</Text>
@@ -80,13 +80,13 @@ const handleLogout = async () => {
               Clube Favorito: <Text style={{ fontWeight: "bold" }}>{user.clube_favorito}</Text>
             </Text>
           )}
-          {/* Bio opcional */}
+         
           {user?.bio && (
             <Text style={styles.bio}>{user.bio}</Text>
           )}
         </View>
 
-        {/* Estatísticas */}
+       
         <View style={styles.statsBox}>
           <View style={styles.stat}>
             <Text style={styles.statNumber}>{user?.previsoes || 0}</Text>
@@ -103,7 +103,7 @@ const handleLogout = async () => {
         </View>
 
         <View style={{ flex: 1, minHeight: 120 }} />
-        {/* Botão Logout */}
+       
 
         <TouchableOpacity style={styles.logoutBtn} onPress={handleLogout}>
           <Text style={styles.logoutText}>Logout</Text>

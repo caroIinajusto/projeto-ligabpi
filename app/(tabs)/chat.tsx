@@ -17,7 +17,7 @@ export default function ChatScreen() {
   const [input, setInput] = useState('');
   const flatListRef = useRef<FlatList>(null);
 
-  // Carregar mensagens
+
   useEffect(() => {
     const fetchMessages = async () => {
       const response = await databases.listDocuments(
@@ -61,7 +61,7 @@ export default function ChatScreen() {
     return () => unsubscribe();
   }, []);
 
-  // Enviar mensagem
+  
   const sendMessage = async () => {
     if (!input.trim() || !user) return;
     await databases.createDocument(
@@ -75,7 +75,7 @@ export default function ChatScreen() {
       }
     );
     setInput('');
-    // Scroll para o fim
+    
     setTimeout(() => flatListRef.current?.scrollToEnd({ animated: true }), 100);
   };
 
