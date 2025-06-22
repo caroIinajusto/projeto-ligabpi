@@ -1,5 +1,5 @@
 const { Client, Databases } = require("node-appwrite");
-const jogadoras = require("./dados/jogadoras.json").jogadoras;
+const jogadoras = require("./jogadoras.json").jogadoras;
 
 
 const client = new Client()

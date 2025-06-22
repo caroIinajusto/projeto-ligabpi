@@ -4,7 +4,7 @@
     "strict": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]  // Ajustado para apontar para a raiz do projeto
+      "@/*": ["./*"]  
     },
     "jsx": "react-native",
     "lib": ["esnext"],

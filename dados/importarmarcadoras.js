@@ -1,5 +1,5 @@
 const { Client, Databases } = require("node-appwrite");
-const marcadoras = require("./dados//marcadoras.json").marcadoras;
+const marcadoras = require("./marcadoras.json").marcadoras;
 
 const client = new Client()
   .setEndpoint("https://cloud.appwrite.io/v1")

@@ -133,7 +133,7 @@ export default function TabLayout() {
     }}
 />
 <Tabs.Screen
-                   name="[JogoId]"
+                   name="previsoes/[jogoId]"
     options={{
         href: null, 
     }}
