@@ -63,9 +63,7 @@ const Profile = () => {
         contentContainerStyle={{ paddingBottom: 32, paddingHorizontal: 16 }}
       >
         
-        <View style={styles.header}>
-          <Text style={styles.headerTitle}>Perfil</Text>
-        </View>
+    
 
         
         <View style={styles.avatarBox}>
