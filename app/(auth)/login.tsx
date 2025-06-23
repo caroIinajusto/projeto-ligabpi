@@ -48,7 +48,7 @@ const LoginScreen = () => {
       <KeyboardAvoidingView
         style={{ flex: 1 }}
         behavior={Platform.OS === "ios" ? "padding" : "height"}
-        keyboardVerticalOffset={Platform.OS === "ios" ? 60 : 0} // Ajusta se tiveres header/tab bar
+        keyboardVerticalOffset={Platform.OS === "ios" ? 60 : 0} 
       >
         <ScrollView
           contentContainerStyle={styles.scrollContainer}

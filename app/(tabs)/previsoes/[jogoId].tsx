@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, TouchableOpacity, ActivityIndicator, Image, ScrollView, StyleSheet, Alert } from 'react-native';
-import { databases, DATABASE_ID, COLLECTIONS, ID } from '@/lib/appwrite';
-import { Query } from 'react-native-appwrite';
+import { databases, DATABASE_ID, COLLECTIONS, ID, Query } from '@/lib/appwrite';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useAuth } from '@/context/AuthContext';
 
@@ -36,6 +35,7 @@ export default function PrevisaoJogoScreen() {
     const [jogadorasCasa, setJogadorasCasa] = useState<Jogadora[]>([]);
     const [jogadorasFora, setJogadorasFora] = useState<Jogadora[]>([]);
     const [loading, setLoading] = useState(true);
+    const [isSubmitting, setIsSubmitting] = useState(false);
     const [previsao, setPrevisao] = useState({
         resultado: '',
         marcadoraId: ''
@@ -44,7 +44,6 @@ export default function PrevisaoJogoScreen() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                
                 const jogoResponse = await databases.getDocument(
                     DATABASE_ID,
                     COLLECTIONS.jogos,
@@ -52,7 +51,6 @@ export default function PrevisaoJogoScreen() {
                 );
                 setJogo(jogoResponse as unknown as Jogo);
 
-                
                 const casaResponse = await databases.listDocuments(
                     DATABASE_ID,
                     COLLECTIONS.jogadoras,
@@ -60,7 +58,6 @@ export default function PrevisaoJogoScreen() {
                 );
                 setJogadorasCasa(casaResponse.documents as unknown as Jogadora[]);
 
-                
                 const foraResponse = await databases.listDocuments(
                     DATABASE_ID,
                     COLLECTIONS.jogadoras,
@@ -86,37 +83,59 @@ export default function PrevisaoJogoScreen() {
         setPrevisao(prev => ({ ...prev, marcadoraId }));
     };
 
-const submitPrevisao = async () => {
-  if (!user || !previsao.resultado) return;
+    const submitPrevisao = async () => {
+        if (!user || !previsao.resultado) {
+            Alert.alert('Erro', 'Preencha o resultado para submeter a previsão');
+            return;
+        }
 
-  const documentData = {
-    utilizador: user.id,         
-    jogo: jogoId as string,      
-    resultado: previsao.resultado,
-    primeira_marcadora: previsao.marcadoraId || null, 
-    data: new Date().toISOString()
-  };
+        setIsSubmitting(true);
 
-  console.log('Dados a enviar:', documentData);
-  console.log('User ID:', user.id);
-  console.log('Jogo ID:', jogoId);
+        try {
+            // Verificar se já existe previsão para este jogo + utilizador
+            const existingPrevisoes = await databases.listDocuments(
+                DATABASE_ID,
+                COLLECTIONS.previsoes,
+                [
+                    Query.equal('utilizador', user.id),
+                    Query.equal('jogo', jogoId as string)
+                ]
+            );
 
-  try {
-    await databases.createDocument(
-      DATABASE_ID,
-      COLLECTIONS.previsoes,
-      ID.unique(),
-      documentData
-    );
-    Alert.alert('Sucesso', 'Previsão registada com sucesso!');
-    router.back();
-  } catch (error) {
-    console.error('Erro ao registrar previsão:', error);
-    const errorMessage = error instanceof Error ? error.message : 'Erro desconhecido';
-    Alert.alert('Erro', 'Erro ao registrar previsão: ' + errorMessage);
-  }
-};
+            if (existingPrevisoes.documents.length > 0) {
+                Alert.alert(
+                    'Limite Atingido',
+                    'Só podes fazer uma previsão por jogo!'
+                );
+                return;
+            }
 
+            // Criar nova previsão
+            const documentData = {
+                utilizador: user.id,
+                jogo: jogoId as string,
+                resultado: previsao.resultado,
+                primeira_marcadora: previsao.marcadoraId || null,
+                data: new Date().toISOString()
+            };
+
+            await databases.createDocument(
+                DATABASE_ID,
+                COLLECTIONS.previsoes,
+                ID.unique(),
+                documentData
+            );
+
+            Alert.alert('Sucesso', 'Previsão registada com sucesso!');
+            router.back();
+        } catch (error) {
+            console.error('Erro ao registrar previsão:', error);
+            const errorMessage = error instanceof Error ? error.message : 'Erro desconhecido';
+            Alert.alert('Erro', 'Erro ao registrar previsão: ' + errorMessage);
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
 
     if (loading || !jogo) {
         return (
@@ -158,7 +177,6 @@ const submitPrevisao = async () => {
                 })}
             </Text>
 
-       
             <Text style={styles.sectionTitle}>Resultado Previsto</Text>
             <View style={styles.betOptions}>
                 {['casa', 'empate', 'fora'].map((option) => (
@@ -178,10 +196,8 @@ const submitPrevisao = async () => {
                 ))}
             </View>
 
-     
             <Text style={styles.sectionTitle}>1ª Marcadora (Opcional)</Text>
             
-
             <Text style={styles.subSectionTitle}>{jogo.equipa_casa.nome}</Text>
             <View style={styles.playersGrid}>
                 {jogadorasCasa.map(jogadora => (
@@ -214,7 +230,6 @@ const submitPrevisao = async () => {
                     </TouchableOpacity>
                 ))}
             </View>
-
 
             <Text style={styles.subSectionTitle}>{jogo.equipa_fora.nome}</Text>
             <View style={styles.playersGrid}>
@@ -250,13 +265,20 @@ const submitPrevisao = async () => {
             </View>
 
             <TouchableOpacity
-                style={[styles.submitButton, !previsao.resultado && styles.submitButtonDisabled]}
-                disabled={!previsao.resultado}
+                style={[
+                    styles.submitButton, 
+                    (!previsao.resultado || isSubmitting) && styles.submitButtonDisabled
+                ]}
+                disabled={!previsao.resultado || isSubmitting}
                 onPress={submitPrevisao}
             >
-                <Text style={styles.submitButtonText}>
-                    Confirmar Previsão
-                </Text>
+                {isSubmitting ? (
+                    <ActivityIndicator color="#fff" />
+                ) : (
+                    <Text style={styles.submitButtonText}>
+                        Confirmar Previsão
+                    </Text>
+                )}
             </TouchableOpacity>
         </ScrollView>
     );
