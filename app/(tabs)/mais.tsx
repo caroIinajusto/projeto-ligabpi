@@ -38,7 +38,8 @@ export default function MaisScreen() {
         if (!user) return;
         setUpdatingClub(true);
         try {
-            await updateUserProfile(user.id, { clube_favorito: clube.nome });
+            await updateUserProfile(user.id, { clube_favorito: clube.$id }); 
+
             
             await refreshUser();
             setShowClubModal(false);

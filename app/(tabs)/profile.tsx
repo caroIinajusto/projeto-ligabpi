@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import { SafeAreaView } from "react-native-safe-area-context";
 import {
   Alert,
@@ -13,10 +13,12 @@ import {
 import { router } from "expo-router";
 import icons from "@/constants/icons";
 import { useAuth } from "@/context/AuthContext";
+import { getPrevisoes } from "@/lib/appwrite";
 
 const Profile = () => {
   
   const { user, logout } = useAuth();
+  const [numPrevisoes, setNumPrevisoes] = useState(0);
 
   const handleLogout = async () => {
     Alert.alert(
@@ -40,6 +42,19 @@ const Profile = () => {
     );
   };
 
+  
+  useEffect(() => {
+    async function fetchPrevisoes() {
+      if (!user) return;
+      try {
+        const response = await getPrevisoes(user.id);
+        setNumPrevisoes(response.total || 0);
+      } catch (error) {
+        console.error('Erro ao buscar previsões:', error);
+      }
+    }
+    fetchPrevisoes();
+  }, [user]);
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#f8fafc" }}>
@@ -86,11 +101,11 @@ const Profile = () => {
         </View>
 
        
-        <View style={styles.statsBox}>
-          <View style={styles.stat}>
-            <Text style={styles.statNumber}>{user?.previsoes || 0}</Text>
-            <Text style={styles.statLabel}>Previsões</Text>
-          </View>
+         <View style={styles.statsBox}>
+      <View style={styles.stat}>
+        <Text style={styles.statNumber}>{numPrevisoes}</Text>
+        <Text style={styles.statLabel}>Previsões</Text>
+      </View>
           <View style={styles.stat}>
             <Text style={styles.statNumber}>{user?.acertos || 0}</Text>
             <Text style={styles.statLabel}>Acertos</Text>

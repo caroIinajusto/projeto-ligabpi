@@ -68,7 +68,7 @@ export async function register(name: string, email: string, password: string) {
                 nome: name,
                 email,
                 avatar: avatars.getInitials(name),
-                clube_favorito: ""
+                clube_favorito: null
             }
         );
 
@@ -99,7 +99,8 @@ export async function getCurrentUser() {
             userDoc = await databases.getDocument(
                 config.databaseId,
                 config.colecoes.utilizadores,
-                currentAccount.$id
+                currentAccount.$id,
+                [Query.select(['*', 'clube_favorito.*'])]
             );
         } catch (e) {
             userDoc = await databases.createDocument(
@@ -110,7 +111,7 @@ export async function getCurrentUser() {
                     nome: currentAccount.name,
                     email: currentAccount.email,
                     avatar: avatars.getInitials(currentAccount.name),
-                    clube_favorito: ""
+                    clube_favorito: null
                 }
             );
         }
@@ -120,7 +121,7 @@ export async function getCurrentUser() {
             name: userDoc.nome || currentAccount.name,
             email: currentAccount.email,
             avatar: userDoc.avatar,
-            clube_favorito: userDoc.clube_favorito || "",
+            clube_favorito: userDoc.clube_favorito?.nome || "",
             bio: userDoc.bio || "",
             previsoes: userDoc.previsoes || 0,
             acertos: userDoc.acertos || 0,
@@ -231,7 +232,7 @@ export async function getMarcadoras(limit = 10) {
 export async function getPrevisoes(userId?: string) {
     const queries = [Query.orderDesc("$createdAt")];
     if (userId) {
-        queries.push(Query.equal("user_id", userId));
+        queries.push(Query.equal("utilizador", userId)); 
     }
     return databases.listDocuments(
         config.databaseId,
@@ -240,13 +241,14 @@ export async function getPrevisoes(userId?: string) {
     );
 }
 
+
 export async function criarPrevisao(userId: string, jogoId: string, previsao: any) {
     return databases.createDocument(
         config.databaseId,
         config.colecoes.previsoes,
         ID.unique(),
         {
-            user_id: userId,
+            utilizador: userId,
             jogo_id: jogoId,
             ...previsao,
             data_criacao: new Date().toISOString()

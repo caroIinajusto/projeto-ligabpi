@@ -106,36 +106,42 @@ export default function TabLayout() {
                    name="previsoes"
     options={{
         href: null, 
+        headerTitle: 'Previsões'
     }}
 />
 <Tabs.Screen
                    name="login"
     options={{
         href: null, 
+         
     }}
 />
 <Tabs.Screen
                    name="registar"
     options={{
-        href: null, 
+        href: null,  
+        
     }}
 />
 <Tabs.Screen
                    name="profile"
     options={{
-        href: null, 
+        href: null,
+         headerTitle: 'Perfil' 
     }}
 />
 <Tabs.Screen
                    name="chat"
     options={{
         href: null, 
+         headerTitle: 'Chat'
     }}
 />
 <Tabs.Screen
                    name="previsoes/[jogoId]"
     options={{
         href: null, 
+         headerTitle: 'Previsões'
     }}
 />
         </Tabs>
