@@ -3,7 +3,7 @@ import { View, Text, FlatList, TouchableOpacity, ActivityIndicator, Image, Style
 import { databases, DATABASE_ID, COLLECTIONS } from '@/lib/appwrite';
 import { Query } from 'react-native-appwrite';
 import { router } from 'expo-router';
-import { useAuth } from '@/context/AuthContext'; // <-- Adapta se usares outro contexto
+import { useAuth } from '@/context/AuthContext'; 
 
 interface Jogo {
     $id: string;
@@ -104,7 +104,9 @@ export default function PrevisoesScreen() {
                     })}
                 </Text>
                 
-              
+                {item.is_fictional && (
+                    <Text style={styles.fictionalTag}>Jogo Imaginário</Text>
+                )}
                 {jaFezPrevisao && (
                     <Text style={styles.previsaoFeitaTag}>Previsão feita</Text>
                 )}

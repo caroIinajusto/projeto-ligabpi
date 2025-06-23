@@ -92,7 +92,7 @@ export default function PrevisaoJogoScreen() {
         setIsSubmitting(true);
 
         try {
-            // Verificar se já existe previsão para este jogo + utilizador
+            
             const existingPrevisoes = await databases.listDocuments(
                 DATABASE_ID,
                 COLLECTIONS.previsoes,
@@ -110,7 +110,7 @@ export default function PrevisaoJogoScreen() {
                 return;
             }
 
-            // Criar nova previsão
+            
             const documentData = {
                 utilizador: user.id,
                 jogo: jogoId as string,

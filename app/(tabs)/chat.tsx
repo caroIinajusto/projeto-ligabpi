@@ -171,7 +171,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     borderTopWidth: 1,
     borderColor: '#e5e7eb',
-    // Remover position absolute!
+    
   },
   input: {
     flex: 1,

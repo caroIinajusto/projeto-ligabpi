@@ -50,7 +50,7 @@ export default function ClubeScreen() {
             setJogadoras(jogadorasResp.documents as unknown as Jogadora[]);
             setLoading(false);
         } catch (error) {
-            console.error('Erro ao buscar info do clube:', error);
+            console.error('Erro ao procurar info do clube:', error);
             setLoading(false);
         }
     };

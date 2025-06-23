@@ -5,8 +5,7 @@ export const settings = [
     icon: icons.jogos,
     title: "Jogos da Liga",
     onPress: () => {
-      // Navegar para a lista de jogos
-      // Exemplo: router.push('/jogos');
+      
     },
   },
   {
