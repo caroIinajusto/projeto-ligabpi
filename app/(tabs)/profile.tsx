@@ -10,36 +10,35 @@ import {
   View,
   StyleSheet,
 } from "react-native";
-import { logout } from '@/lib/appwrite';
-import { useGlobalContext } from "@/lib/global-provider";
 import { router } from "expo-router";
 import icons from "@/constants/icons";
+import { useAuth } from "@/context/AuthContext";
 
 const Profile = () => {
-  const { user, logout: contextLogout } = useGlobalContext();
+  
+  const { user, logout } = useAuth();
 
-const handleLogout = async () => {
-  Alert.alert(
-    'Confirmar Logout',
-    'Tem a certeza que quer terminar a sessão?',
-    [
-      { text: 'Cancelar', style: 'cancel' },
-      {
-        text: 'Sair',
-        style: 'destructive',
-        onPress: async () => {
-          try {
-            await logout();     
-            contextLogout();       
-            router.replace('/(auth)/login'); 
-          } catch (error) {
-            Alert.alert('Erro', 'Não foi possível terminar a sessão.');
+  const handleLogout = async () => {
+    Alert.alert(
+      'Confirmar Logout',
+      'Tem a certeza que quer terminar a sessão?',
+      [
+        { text: 'Cancelar', style: 'cancel' },
+        {
+          text: 'Sair',
+          style: 'destructive',
+          onPress: async () => {
+            try {
+              await logout(); 
+              router.replace('/(auth)/login');
+            } catch (error) {
+              Alert.alert('Erro', 'Não foi possível terminar a sessão.');
+            }
           }
         }
-      }
-    ]
-  );
-};
+      ]
+    );
+  };
 
 
   return (

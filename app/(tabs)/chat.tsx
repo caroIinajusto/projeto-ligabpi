@@ -1,5 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { View, Text, FlatList, TextInput, TouchableOpacity, StyleSheet, KeyboardAvoidingView, Platform } from 'react-native';
+import {
+  View,
+  Text,
+  FlatList,
+  TextInput,
+  TouchableOpacity,
+  StyleSheet,
+  KeyboardAvoidingView,
+  Platform,
+} from 'react-native';
 import { databases, ID, DATABASE_ID, COLLECTIONS, Query } from '@/lib/appwrite';
 import { useAuth } from '@/context/AuthContext';
 
@@ -15,8 +24,7 @@ export default function ChatScreen() {
   const { user } = useAuth();
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState('');
-  const flatListRef = useRef<FlatList>(null);
-
+  const flatListRef = useRef<FlatList<any>>(null);
 
   useEffect(() => {
     const fetchMessages = async () => {
@@ -40,7 +48,6 @@ export default function ChatScreen() {
 
     fetchMessages();
 
-    
     const unsubscribe = databases.client.subscribe(
       `databases.${DATABASE_ID}.collections.${COLLECTIONS.mensagens_chat}.documents`,
       (response: any) => {
@@ -61,7 +68,6 @@ export default function ChatScreen() {
     return () => unsubscribe();
   }, []);
 
-  
   const sendMessage = async () => {
     if (!input.trim() || !user) return;
     await databases.createDocument(
@@ -75,7 +81,6 @@ export default function ChatScreen() {
       }
     );
     setInput('');
-    
     setTimeout(() => flatListRef.current?.scrollToEnd({ animated: true }), 100);
   };
 
@@ -86,37 +91,41 @@ export default function ChatScreen() {
     ]}>
       <Text style={styles.userName}>{item.userName}</Text>
       <Text style={styles.messageText}>{item.text}</Text>
-      <Text style={styles.messageTime}>{new Date(item.createdAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</Text>
+      <Text style={styles.messageTime}>
+        {new Date(item.createdAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+      </Text>
     </View>
   );
 
   return (
     <KeyboardAvoidingView
       style={{ flex: 1, backgroundColor: '#f8fafc' }}
-      behavior={Platform.OS === "ios" ? "padding" : undefined}
-      keyboardVerticalOffset={80}
+      behavior={Platform.OS === "ios" ? "padding" : "height"}
+      keyboardVerticalOffset={Platform.OS === "ios" ? 80 : 0}
     >
-      <FlatList
-        ref={flatListRef}
-        data={messages}
-        renderItem={renderItem}
-        keyExtractor={item => item._id}
-        contentContainerStyle={{ padding: 16, paddingBottom: 80 }}
-        showsVerticalScrollIndicator={false}
-        onContentSizeChange={() => flatListRef.current?.scrollToEnd({ animated: true })}
-      />
-      <View style={styles.inputBar}>
-        <TextInput
-          style={styles.input}
-          value={input}
-          onChangeText={setInput}
-          placeholder="Escreve uma mensagem..."
-          onSubmitEditing={sendMessage}
-          returnKeyType="send"
+      <View style={{ flex: 1 }}>
+        <FlatList
+          ref={flatListRef}
+          data={messages}
+          renderItem={renderItem}
+          keyExtractor={item => item._id}
+          contentContainerStyle={{ padding: 16, paddingBottom: 16 }}
+          showsVerticalScrollIndicator={false}
+          onContentSizeChange={() => flatListRef.current?.scrollToEnd({ animated: true })}
         />
-        <TouchableOpacity style={styles.sendButton} onPress={sendMessage}>
-          <Text style={styles.sendButtonText}>Enviar</Text>
-        </TouchableOpacity>
+        <View style={styles.inputBar}>
+          <TextInput
+            style={styles.input}
+            value={input}
+            onChangeText={setInput}
+            placeholder="Escreve uma mensagem..."
+            onSubmitEditing={sendMessage}
+            returnKeyType="send"
+          />
+          <TouchableOpacity style={styles.sendButton} onPress={sendMessage}>
+            <Text style={styles.sendButtonText}>Enviar</Text>
+          </TouchableOpacity>
+        </View>
       </View>
     </KeyboardAvoidingView>
   );
@@ -162,10 +171,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     borderTopWidth: 1,
     borderColor: '#e5e7eb',
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    right: 0,
+    // Remover position absolute!
   },
   input: {
     flex: 1,

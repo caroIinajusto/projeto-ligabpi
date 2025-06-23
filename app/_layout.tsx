@@ -1,4 +1,3 @@
-// app/_layout.tsx
 import { useEffect } from "react";
 import { Stack, useRouter, useSegments, SplashScreen } from "expo-router";
 import { AuthProvider, useAuth } from "@/context/AuthContext";
@@ -15,20 +14,20 @@ function AuthGate() {
   useEffect(() => {
     if (loading) return;
 
-    // 1. Extrai o grupo principal da rota atual
+ 
     const currentRouteGroup = segments[0] || '';
     
-    console.log("🔍 Debug - User:", !!user);
-    console.log("🔍 Debug - Segments:", segments);
-    console.log("🔍 Debug - Current Route Group:", currentRouteGroup);
+    console.log(" Debug - User:", !!user);
+    console.log(" Debug - Segments:", segments);
+    console.log(" Debug - Current Route Group:", currentRouteGroup);
 
-    // 2. Se NÃO há utilizador e NÃO estamos no grupo (auth)
+   
     if (!user && currentRouteGroup !== '(auth)') {
       console.log("Redirecionando para login...");
       router.replace("/(auth)/login");
     }
     
-    // 3. Se HÁ utilizador e estamos no grupo (auth)
+
     if (user && currentRouteGroup === '(auth)') {
       console.log("Redirecionando para tabs...");
       router.replace("/(tabs)");

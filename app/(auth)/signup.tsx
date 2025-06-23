@@ -9,6 +9,8 @@ import {
   View,
   StyleSheet,
   StatusBar,
+  KeyboardAvoidingView,
+  Platform,
 } from "react-native";
 import { register } from "@/lib/appwrite";
 import { router } from "expo-router";
@@ -46,80 +48,91 @@ const SignupScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="dark-content" backgroundColor="#ffffff" />
-      
-      <ScrollView 
-        contentContainerStyle={styles.scrollContainer}
-        showsVerticalScrollIndicator={false}
+      <KeyboardAvoidingView
+        style={{ flex: 1 }}
+        behavior={Platform.OS === "ios" ? "padding" : "height"}
+        keyboardVerticalOffset={Platform.OS === "ios" ? 60 : 0} // Ajusta se tiveres header/tab bar
       >
-       
-        <View style={styles.header}>
-          <Text style={styles.welcomeText}>Bem-vindo à</Text>
-          <Text style={styles.titleText}>
-            Liga BPI{"\n"}
-            <Text style={styles.subtitleText}>Futebol Feminino</Text>
-          </Text>
-          <Text style={styles.descriptionText}>
-            Crie a sua conta para acompanhar o campeonato
-          </Text>
-        </View>
-
-        
-        <View style={styles.formContainer}>
-          <View style={styles.inputContainer}>
-            <TextInput
-              style={styles.input}
-              placeholder="Nome de Utilizador"
-              placeholderTextColor="#9CA3AF"
-              value={nome}
-              onChangeText={setNome}
-              autoCapitalize="words"
-            />
-          </View>
-
-          <View style={styles.inputContainer}>
-            <TextInput
-              style={styles.input}
-              placeholder="Email"
-              placeholderTextColor="#9CA3AF"
-              value={email}
-              onChangeText={setEmail}
-              keyboardType="email-address"
-              autoCapitalize="none"
-            />
-          </View>
-
-          <View style={styles.inputContainer}>
-            <TextInput
-              style={styles.input}
-              placeholder="Senha (mínimo 8 caracteres)"
-              placeholderTextColor="#9CA3AF"
-              value={senha}
-              onChangeText={setSenha}
-              secureTextEntry
-            />
-          </View>
-
-          <TouchableOpacity
-            style={[styles.button, processando && styles.buttonDisabled]}
-            onPress={handleSignup}
-            disabled={processando}
-          >
-            <Text style={styles.buttonText}>
-              {processando ? "Criando conta..." : "Registar"}
+        <ScrollView
+          contentContainerStyle={styles.scrollContainer}
+          showsVerticalScrollIndicator={false}
+          keyboardShouldPersistTaps="handled"
+        >
+          <View style={styles.header}>
+            <Text style={styles.welcomeText}>Bem-vindo à</Text>
+            <Text style={styles.titleText}>
+              Liga BPI{"\n"}
+              <Text style={styles.subtitleText}>Futebol Feminino</Text>
             </Text>
-          </TouchableOpacity>
-        </View>
-
-        
-        <View style={styles.footer}>
-          <TouchableOpacity onPress={() => router.push("/(auth)/login")}>
-            <Text style={styles.footerText}>
-              Já tem uma conta?{" "}
-              <Text style={styles.linkText}>Faça login</Text>
+            <Text style={styles.descriptionText}>
+              Crie a sua conta para acompanhar o campeonato
             </Text>
-          </TouchableOpacity>
-        </View>
-      </ScrollView>
+          </View>
+
+          <View style={styles.formContainer}>
+            <View style={styles.inputContainer}>
+              <TextInput
+                style={styles.input}
+                placeholder="Nome de Utilizador"
+                placeholderTextColor="#9CA3AF"
+                value={nome}
+                onChangeText={setNome}
+                autoCapitalize="words"
+                returnKeyType="next"
+                textContentType="name"
+              />
+            </View>
+
+            <View style={styles.inputContainer}>
+              <TextInput
+                style={styles.input}
+                placeholder="Email"
+                placeholderTextColor="#9CA3AF"
+                value={email}
+                onChangeText={setEmail}
+                keyboardType="email-address"
+                autoCapitalize="none"
+                autoCorrect={false}
+                returnKeyType="next"
+                textContentType="emailAddress"
+              />
+            </View>
+
+            <View style={styles.inputContainer}>
+              <TextInput
+                style={styles.input}
+                placeholder="Senha (mínimo 8 caracteres)"
+                placeholderTextColor="#9CA3AF"
+                value={senha}
+                onChangeText={setSenha}
+                secureTextEntry
+                returnKeyType="done"
+                textContentType="password"
+                onSubmitEditing={handleSignup}
+              />
+            </View>
+
+            <TouchableOpacity
+              style={[styles.button, processando && styles.buttonDisabled]}
+              onPress={handleSignup}
+              disabled={processando}
+            >
+              <Text style={styles.buttonText}>
+                {processando ? "Criando conta..." : "Registar"}
+              </Text>
+            </TouchableOpacity>
+          </View>
+
+          <View style={styles.footer}>
+            <TouchableOpacity onPress={() => router.push("/(auth)/login")}>
+              <Text style={styles.footerText}>
+                Já tem uma conta?{" "}
+                <Text style={styles.linkText}>Faça login</Text>
+              </Text>
+            </TouchableOpacity>
+          </View>
+        </ScrollView>
+      </KeyboardAvoidingView>
     </SafeAreaView>
   );
 };
@@ -132,6 +145,7 @@ const styles = StyleSheet.create({
   scrollContainer: {
     flexGrow: 1,
     paddingHorizontal: 24,
+    justifyContent: "center",
   },
   header: {
     alignItems: "center",

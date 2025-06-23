@@ -1,4 +1,3 @@
-// context/AuthContext.tsx
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { getCurrentUser, loginWithEmail, register, logout as appwriteLogout } from '../lib/appwrite';
 
@@ -8,6 +7,10 @@ export interface User {
   email: string;
   avatar?: string;
   clube_favorito?: string;
+  bio?: string;
+  previsoes?: number;
+  acertos?: number;
+  ranking?: number;
 }
 
 interface AuthContextType {
