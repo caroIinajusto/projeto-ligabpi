@@ -127,7 +127,7 @@ export default function PrevisaoJogoScreen() {
             );
 
             Alert.alert('Sucesso', 'Previsão registada com sucesso!');
-            router.back();
+            router.replace('/previsoes');
         } catch (error) {
             console.error('Erro ao registrar previsão:', error);
             const errorMessage = error instanceof Error ? error.message : 'Erro desconhecido';
